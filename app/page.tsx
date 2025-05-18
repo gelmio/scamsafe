@@ -3,16 +3,7 @@
 import type React from "react";
 
 import { useState, useRef } from "react";
-import {
-    Shield,
-    Users,
-    BookOpen,
-    Award,
-    ChevronDown,
-    Mail,
-    Phone,
-    MapPin,
-} from "lucide-react";
+import { Shield, Users, BookOpen, Award, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -42,12 +33,12 @@ export default function Home() {
     };
 
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="grid min-h-screen">
             <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+                <div className="container flex h-16 items-center justify-between px-4 md:px-6 mx-auto">
                     <div className="flex items-center gap-2">
                         <Shield className="h-6 w-6 text-emerald-500" />
-                        <span className="text-xl font-bold">ScamShield</span>
+                        <span className="text-xl font-bold">ScamSafe</span>
                     </div>
                     <nav className="hidden md:flex items-center gap-8 py-2">
                         <button
@@ -82,10 +73,6 @@ export default function Home() {
                             Contact Me
                         </Button>
                     </nav>
-                    <Button variant="outline" size="icon" className="md:hidden">
-                        <ChevronDown className="h-4 w-4" />
-                        <span className="sr-only">Toggle menu</span>
-                    </Button>
                 </div>
             </header>
 
@@ -94,21 +81,26 @@ export default function Home() {
                     ref={heroRef}
                     className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-emerald-50 to-white"
                 >
-                    <div className="container px-4 md:px-6">
+                    <div className="container px-4 md:px-6 mx-auto">
                         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                             <div className="space-y-4">
                                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                                     Stay Safe Online with{" "}
-                                    <span className="text-emerald-500">
-                                        Joe Bloggs
+                                    <span className="text-emerald-500 block">
+                                        Luke Gelmi
                                     </span>
                                 </h1>
                                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Practical advice, lessons, and training to
                                     protect yourself from online scams. Learn
                                     how to identify threats and strengthen your
-                                    digital security.
+                                    digital security with my &quot;pay what you
+                                    want&quot; groups sessions.
                                 </p>
+                                <div className="flex gap-2 text-muted-foreground">
+                                    <MapPin />
+                                    <p>Perth, WA</p>
+                                </div>
                                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                                     <Button
                                         onClick={() =>
@@ -128,15 +120,19 @@ export default function Home() {
                                     </Button>
                                 </div>
                             </div>
-                            <div className="mx-auto lg:mx-0 relative">
+                            <div className="mx-auto lg:mx-0 relative grid justify-items-center gap-2">
                                 <div className="absolute inset-0 bg-emerald-100 rounded-full blur-3xl opacity-30"></div>
                                 <img
-                                    src="/placeholder.svg?height=550&width=550"
+                                    src="/class.png"
                                     alt="Digital security illustration"
                                     className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full relative z-10"
                                     width={550}
                                     height={550}
                                 />
+                                <p className="text-sm text-muted-foreground">
+                                    Sorry for the AI image, I&apos;ll take a
+                                    real photo when I can!
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -146,28 +142,31 @@ export default function Home() {
                     ref={aboutRef}
                     className="w-full py-12 md:py-24 lg:py-32"
                 >
-                    <div className="container px-4 md:px-6">
+                    <div className="container px-4 md:px-6 mx-auto">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                    Meet Joe Bloggs
+                                    Meet Luke Gelmi
                                 </h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    With over 15 years of experience in
-                                    cybersecurity, I&apos;m passionate about
+                                    With over 8 years of experience in software
+                                    engineering, I&apos;m passionate about
                                     helping people stay safe online.
                                 </p>
                             </div>
                         </div>
                         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                            <div className="mx-auto lg:mx-0">
+                            <div className="mx-auto lg:mx-0 grid gap-2 justify-items-center">
                                 <img
-                                    src="/placeholder.svg?height=400&width=400"
+                                    src="/me.png"
                                     alt="Joe Bloggs portrait"
                                     className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
                                     width={400}
                                     height={400}
                                 />
+                                <p className="text-sm text-muted-foreground">
+                                    This one is actually me!
+                                </p>
                             </div>
                             <div className="flex flex-col justify-center space-y-4">
                                 <div className="space-y-2">
@@ -175,33 +174,36 @@ export default function Home() {
                                         Why I Started ScamShield
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        After seeing too many friends and family
-                                        members fall victim to online scams, I
-                                        decided to use my expertise to help
-                                        others. I believe everyone deserves to
-                                        feel confident and secure in their
-                                        digital lives.
+                                        My parent&apos;s lack of scam savvy
+                                        freaked me out. With a single session I
+                                        helped build their defences. Doing the
+                                        same for others is a very rewarding
+                                        experience. If you&apos;ve got one
+                                        password that you use for all your
+                                        logins, then you&apos;re in the right
+                                        place!
                                     </p>
                                 </div>
                                 <ul className="grid gap-4">
                                     <li className="flex items-center gap-2">
                                         <Shield className="h-5 w-5 text-emerald-500" />
                                         <span>
-                                            Certified Cybersecurity Professional
+                                            Software Engineering Professional
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <Users className="h-5 w-5 text-emerald-500" />
                                         <span>
-                                            Helped 500+ individuals stay safe
-                                            online
+                                            Helped 4+ individuals stay safe
+                                            online (at least you know I&apos;m
+                                            honest!)
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <BookOpen className="h-5 w-5 text-emerald-500" />
                                         <span>
-                                            Regular speaker at community safety
-                                            events
+                                            Friendly and approachable sessions
+                                            for all levels
                                         </span>
                                     </li>
                                 </ul>
@@ -214,15 +216,15 @@ export default function Home() {
                     ref={servicesRef}
                     className="w-full py-12 md:py-24 lg:py-32 bg-emerald-50"
                 >
-                    <div className="container px-4 md:px-6">
+                    <div className="container px-4 md:px-6 mx-auto">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                                     How I Can Help You
                                 </h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    Practical, hands-on training to keep you and
-                                    your loved ones safe from online threats.
+                                    Practical, hands-on training and real action
+                                    to make you safe from online threats.
                                 </p>
                             </div>
                         </div>
@@ -233,12 +235,12 @@ export default function Home() {
                                         <Shield className="h-8 w-8 text-emerald-500" />
                                     </div>
                                     <h3 className="text-xl font-bold">
-                                        Personal Consultations
+                                        Up-to-date expertise
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        One-on-one sessions to assess your
-                                        current security practices and create a
-                                        personalized protection plan.
+                                        I keep track of the latest scams
+                                        (they&apos;re getting so clever!) so
+                                        that you don&apos;t have to.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -248,12 +250,12 @@ export default function Home() {
                                         <Users className="h-8 w-8 text-emerald-500" />
                                     </div>
                                     <h3 className="text-xl font-bold">
-                                        Group Workshops
+                                        In-person group sessions
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        Interactive sessions for families,
-                                        community groups, or businesses to learn
-                                        essential scam prevention skills.
+                                        Our sessions are all in person in small
+                                        groups, so you can one on one support as
+                                        we build up your scam defences.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -266,9 +268,11 @@ export default function Home() {
                                         Ongoing Support
                                     </h3>
                                     <p className="text-muted-foreground">
-                                        Regular check-ins and updates on the
-                                        latest scam techniques to ensure your
-                                        protection stays current.
+                                        I&apos;m here to help if ever
+                                        you&apos;re in trouble or in doubt; the
+                                        name of the game is to make sure you
+                                        never make it into the newspapers as the
+                                        latest scam victim!
                                     </p>
                                 </CardContent>
                             </Card>
@@ -280,7 +284,7 @@ export default function Home() {
                     ref={testimonialsRef}
                     className="w-full py-12 md:py-24 lg:py-32"
                 >
-                    <div className="container px-4 md:px-6">
+                    <div className="container px-4 md:px- mx-auto">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -295,28 +299,8 @@ export default function Home() {
                         <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
                             {[
                                 {
-                                    name: "Sarah Johnson",
-                                    text: "Joe helped me identify and avoid a sophisticated phishing attempt that could have cost me thousands. His practical advice was easy to understand and implement.",
-                                },
-                                {
-                                    name: "Michael Chen",
-                                    text: "After attending Joe's workshop, our entire family feels more confident online. We've set up better passwords, enabled two-factor authentication, and know the warning signs of scams.",
-                                },
-                                {
-                                    name: "Emily Rodriguez",
-                                    text: "As a senior citizen, I was worried about being targeted by scammers. Joe's patient, clear explanations helped me feel empowered rather than fearful when using technology.",
-                                },
-                                {
-                                    name: "David Thompson",
-                                    text: "Joe's consultation was eye-opening. He identified several security vulnerabilities I wasn't aware of and provided simple solutions to address them.",
-                                },
-                                {
-                                    name: "Lisa Williams",
-                                    text: "Our community group learned so much from Joe's presentation. He made complex security concepts accessible and gave us practical tools to protect ourselves.",
-                                },
-                                {
-                                    name: "Robert Kim",
-                                    text: "After my neighbor fell victim to a scam, I reached out to Joe. His preventative approach has given me peace of mind that I won't make the same mistakes.",
+                                    name: "Michelle, Woodvale",
+                                    text: "I've always had great difficulty understanding computers and how they work. Luke explained everything clearly and patiently. He took the time to make sure we all understood, and did so in a way that was informative, supportive, and never overwhelming. Luke also helped us set up new passwords in a way that was easy to manage and remember. I would highly recommend him to anyone needing tech help. Thanks again, Luke!",
                                 },
                             ].map((testimonial, index) => (
                                 <Card
@@ -344,7 +328,7 @@ export default function Home() {
                     ref={contactRef}
                     className="w-full py-12 md:py-24 lg:py-32 bg-emerald-50"
                 >
-                    <div className="container px-4 md:px-6">
+                    <div className="container px-4 md:px-6 mx-auto">
                         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
                             <div className="space-y-4">
                                 <div className="space-y-2">
@@ -353,26 +337,21 @@ export default function Home() {
                                     </h2>
                                     <p className="text-muted-foreground">
                                         Ready to strengthen your online
-                                        security? Reach out to schedule a
-                                        consultation or learn more about my
+                                        security? Reach out to schedule a book a
+                                        spot in a session or learn more about my
                                         services.
                                     </p>
                                 </div>
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-2">
                                         <Mail className="h-5 w-5 text-emerald-500" />
-                                        <span>joe@scamshield-example.com</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5 text-emerald-500" />
-                                        <span>(555) 123-4567</span>
+                                        <span>luke@scamsafe.me</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <MapPin className="h-5 w-5 text-emerald-500" />
                                         <span>
-                                            Available for in-person
-                                            consultations in the Greater London
-                                            area
+                                            Available for in-person worshops in
+                                            the Perth metro area
                                         </span>
                                     </div>
                                 </div>
@@ -451,15 +430,15 @@ export default function Home() {
             </main>
 
             <footer className="w-full border-t py-6">
-                <div className="container px-4 md:px-6 flex flex-col items-center justify-between gap-4 md:flex-row">
+                <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:flex-row">
                     <div className="flex items-center gap-2">
                         <Shield className="h-5 w-5 text-emerald-500" />
                         <p className="text-sm text-muted-foreground">
-                            © {new Date().getFullYear()} ScamShield by Joe
-                            Bloggs. All rights reserved.
+                            © {new Date().getFullYear()} by Luke Gelmi. All
+                            rights reserved.
                         </p>
                     </div>
-                    <div className="flex gap-4">
+                    {/* <div className="flex gap-4">
                         <a
                             href="#"
                             className="text-sm text-muted-foreground hover:text-emerald-500 transition-colors"
@@ -472,7 +451,7 @@ export default function Home() {
                         >
                             Terms of Service
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </footer>
         </div>
