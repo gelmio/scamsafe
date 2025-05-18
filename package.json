@@ -6,7 +6,8 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "static": "next build && touch ./out/.nojekyll && echo 'scamsafe.me' > ./out/CNAME && rm -rf docs && cp -r out docs"
     },
     "dependencies": {
         "@radix-ui/react-slot": "^1.2.2",
