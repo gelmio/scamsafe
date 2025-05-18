@@ -1,3 +1,5 @@
+# Don't judge me, this is AI slop that's been cleaned up a little.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
