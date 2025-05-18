@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
 
 export default function Home() {
     const [name, setName] = useState("");
@@ -30,18 +29,13 @@ export default function Home() {
     const testimonialsRef = useRef<HTMLElement>(null);
     const contactRef = useRef<HTMLElement>(null);
 
-    const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
-        ref.current?.scrollIntoView({ behavior: "smooth" });
+    const scrollToSection = (ref?: React.RefObject<HTMLElement | null>) => {
+        ref?.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // In a real application, you would send this data to your backend
-        toast({
-            title: "Message sent!",
-            description:
-                "Thanks for reaching out. Joe will get back to you soon.",
-        });
         setName("");
         setEmail("");
         setMessage("");
@@ -160,8 +154,8 @@ export default function Home() {
                                 </h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     With over 15 years of experience in
-                                    cybersecurity, I'm passionate about helping
-                                    people stay safe online.
+                                    cybersecurity, I&apos;m passionate about
+                                    helping people stay safe online.
                                 </p>
                             </div>
                         </div>
@@ -293,8 +287,8 @@ export default function Home() {
                                     Success Stories
                                 </h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    Hear from people who've strengthened their
-                                    online security with my help.
+                                    Hear from people who&apos;ve strengthened
+                                    their online security with my help.
                                 </p>
                             </div>
                         </div>
@@ -337,7 +331,7 @@ export default function Home() {
                                             </span>
                                         </div>
                                         <p className="text-muted-foreground italic">
-                                            "{testimonial.text}"
+                                            &quot;{testimonial.text}&quot;
                                         </p>
                                     </CardContent>
                                 </Card>
