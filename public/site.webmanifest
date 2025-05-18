@@ -1,0 +1,21 @@
+{
+    "name": "ScamSafe by Luke Gelmi",
+    "short_name": "ScamSafe",
+    "description": "Expert advice, lessons, and training to protect yourself from online scams.",
+    "icons": [
+        {
+            "src": "/icon.svg",
+            "sizes": "192x192",
+            "type": "image/svg"
+        },
+        {
+            "src": "/icon.svg",
+            "sizes": "512x512",
+            "type": "image/svg"
+        }
+    ],
+    "theme_color": "#10b981",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/"
+}

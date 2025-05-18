@@ -159,7 +159,7 @@ export default function Home() {
                             <div className="mx-auto lg:mx-0 grid gap-2 justify-items-center">
                                 <img
                                     src="/me.png"
-                                    alt="Joe Bloggs portrait"
+                                    alt="Luke Gelmi portrait"
                                     className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
                                     width={400}
                                     height={400}
@@ -171,7 +171,7 @@ export default function Home() {
                             <div className="flex flex-col justify-center space-y-4">
                                 <div className="space-y-2">
                                     <h3 className="text-2xl font-bold">
-                                        Why I Started ScamShield
+                                        Why I Started ScamSafe
                                     </h3>
                                     <p className="text-muted-foreground">
                                         My parent&apos;s lack of scam savvy
