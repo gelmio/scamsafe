@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { Shield, Users, BookOpen, Award, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BrevoSubscribeForm } from "./breavo-subscribe-form";
+import BrevoSubscribeForm from "./breavo-subscribe-form";
 
 export default function Home() {
     const heroRef = useRef<HTMLElement>(null);
@@ -344,7 +344,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <Card className="border-2 border-emerald-100">
-                                <CardContent className="p-6">
+                                <CardContent>
                                     <BrevoSubscribeForm />
                                 </CardContent>
                             </Card>

@@ -104,12 +104,16 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 {children}
+                <script
+                    src="https://www.google.com/recaptcha/api.js?render=6Lc50D4rAAAAANfq20-dGhCSQN-ukUFJ6ZJT0PWl&hl=en"
+                    async
+                    defer
+                />
+                <script
+                    defer
+                    src="https://sibforms.com/forms/end-form/build/main.js"
+                ></script>
             </body>
-            <script
-                src="https://www.google.com/recaptcha/api.js?render=6Lc50D4rAAAAANfq20-dGhCSQN-ukUFJ6ZJT0PWl&hl=en"
-                async
-                defer
-            />
         </html>
     );
 }
