@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { BrevoSubscribeForm } from "./breavo-subscribe-form";
 
 export default function Home() {
     const [name, setName] = useState("");
@@ -358,70 +359,7 @@ export default function Home() {
                             </div>
                             <Card className="border-2 border-emerald-100">
                                 <CardContent className="p-6">
-                                    <form
-                                        onSubmit={handleSubmit}
-                                        className="space-y-4"
-                                    >
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="name"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                Name
-                                            </label>
-                                            <Input
-                                                id="name"
-                                                value={name}
-                                                onChange={(e) =>
-                                                    setName(e.target.value)
-                                                }
-                                                placeholder="Your name"
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="email"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                Email
-                                            </label>
-                                            <Input
-                                                id="email"
-                                                type="email"
-                                                value={email}
-                                                onChange={(e) =>
-                                                    setEmail(e.target.value)
-                                                }
-                                                placeholder="Your email"
-                                                required
-                                            />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label
-                                                htmlFor="message"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                Message
-                                            </label>
-                                            <Textarea
-                                                id="message"
-                                                value={message}
-                                                onChange={(e) =>
-                                                    setMessage(e.target.value)
-                                                }
-                                                placeholder="How can I help you?"
-                                                className="min-h-[120px]"
-                                                required
-                                            />
-                                        </div>
-                                        <Button
-                                            type="submit"
-                                            className="w-full bg-emerald-500 hover:bg-emerald-600"
-                                        >
-                                            Send Message
-                                        </Button>
-                                    </form>
+                                    <BrevoSubscribeForm />
                                 </CardContent>
                             </Card>
                         </div>
