@@ -2,19 +2,13 @@
 
 import type React from "react";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Shield, Users, BookOpen, Award, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { BrevoSubscribeForm } from "./breavo-subscribe-form";
 
 export default function Home() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-
     const heroRef = useRef<HTMLElement>(null);
     const aboutRef = useRef<HTMLElement>(null);
     const servicesRef = useRef<HTMLElement>(null);
@@ -23,14 +17,6 @@ export default function Home() {
 
     const scrollToSection = (ref?: React.RefObject<HTMLElement | null>) => {
         ref?.current?.scrollIntoView({ behavior: "smooth" });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // In a real application, you would send this data to your backend
-        setName("");
-        setEmail("");
-        setMessage("");
     };
 
     return (
