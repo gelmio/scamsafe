@@ -69,7 +69,7 @@ export default function BrevoSubscribeForm() {
                             </svg>
                             <span className="sib-form-message-panel__inner-text">
                                 Your contact has been received. I&apos;ll be in
-                                touch shortly. Cheers, Luke
+                                touch shortly.
                             </span>
                         </div>
                     </div>
