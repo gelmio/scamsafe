@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         siteName: "ScamSafe",
         images: [
             {
-                url: "https://scamsafe.me/class-rectangle.png",
+                url: "https://scamsafe.me/class-rectangle-2.png",
                 width: 1200,
                 height: 630,
                 alt: "ScamSafe training session with Luke Gelmi and clients",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         title: "ScamSafe by Luke Gelmi | Online Scam Protection & Training",
         description:
             "Get expert training from Luke Gelmi to protect yourself from phishing, fraud, and online threats.",
-        images: ["https://scamsafe.me/class-rectangle.png"],
+        images: ["https://scamsafe.me/class-rectangle-2.png"],
         creator: "@scamsafeme", // optional: use your actual Twitter handle if available
     },
     robots: {
