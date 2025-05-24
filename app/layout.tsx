@@ -13,18 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "ScamSafe by Luke Gelmi | Scam Protection & Training",
+    title: "ScamSafe by Luke Gelmi | Online Scam Protection & Training",
     description:
-        "Expert advice, lessons, and training to protect yourself from online scams. Learn how to identify threats and strengthen your digital security with Luke Gelmi.",
+        "Learn how to spot scams and protect your digital life. ScamSafe offers expert advice, personal consultations, and training led by Luke Gelmi.",
     keywords: [
         "online scam protection",
         "cybersecurity training",
         "phishing prevention",
         "digital security",
-        "online safety",
-        "scam awareness",
-        "Luke Gelmi security",
-        "internet safety lessons",
+        "scam prevention",
+        "Luke Gelmi",
+        "internet safety",
+        "online security courses",
+        "anti-fraud training",
     ],
     authors: [{ name: "Luke Gelmi", url: "https://scamsafe.me" }],
     creator: "Luke Gelmi",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     },
     metadataBase: new URL("https://scamsafe.me"),
     alternates: {
-        canonical: "/",
+        canonical: "https://scamsafe.me/",
     },
     openGraph: {
         type: "website",
@@ -44,23 +45,25 @@ export const metadata: Metadata = {
         url: "https://scamsafe.me",
         title: "ScamSafe by Luke Gelmi | Stay Safe Online",
         description:
-            "Expert training and advice to protect yourself from online scams and threats. Personal consultations, group workshops, and ongoing support.",
+            "Protect yourself from scams with ScamSafe. Expert advice, private training, and group workshops designed for online safety.",
         siteName: "ScamSafe",
         images: [
             {
-                url: "https://scamsafe.me/class.png",
+                url: "https://scamsafe.me/class-rectangle.png",
                 width: 1200,
                 height: 630,
-                alt: "ScamSafe by Luke Gelmi - Online Scam Protection",
+                alt: "ScamSafe training session with Luke Gelmi and clients",
+                type: "image/png",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "ScamSafe by Luke Gelmi | Online Scam Protection",
+        title: "ScamSafe by Luke Gelmi | Online Scam Protection & Training",
         description:
-            "Expert training and advice to protect yourself from online scams and threats.",
-        images: ["https://scamsafe.me/class.png"],
+            "Get expert training from Luke Gelmi to protect yourself from phishing, fraud, and online threats.",
+        images: ["https://scamsafe.me/class-rectangle.png"],
+        creator: "@scamsafeme", // optional: use your actual Twitter handle if available
     },
     robots: {
         index: true,
