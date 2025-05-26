@@ -289,6 +289,9 @@ export default function Home() {
                                     name: "Michelle, Woodvale",
                                     text: "I've always had great difficulty understanding computers and how they work. Luke explained everything clearly and patiently. He took the time to make sure we all understood, and did so in a way that was informative, supportive, and never overwhelming. Luke also helped us set up new passwords in a way that was easy to manage and remember. I would highly recommend him to anyone needing tech help. Thanks again, Luke!",
                                 },
+                                {
+                                    name: "More to come!",
+                                },
                             ].map((testimonial, index) => (
                                 <Card
                                     key={index}
@@ -301,9 +304,11 @@ export default function Home() {
                                                 {testimonial.name}
                                             </span>
                                         </div>
-                                        <p className="text-muted-foreground italic">
-                                            &quot;{testimonial.text}&quot;
-                                        </p>
+                                        {testimonial.text && (
+                                            <p className="text-muted-foreground italic">
+                                                &quot;{testimonial.text}&quot;
+                                            </p>
+                                        )}
                                     </CardContent>
                                 </Card>
                             ))}
