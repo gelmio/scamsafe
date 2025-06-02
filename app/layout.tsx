@@ -116,6 +116,10 @@ export default function RootLayout({
                     defer
                     src="https://sibforms.com/forms/end-form/build/main.js"
                 ></script>
+                <script
+                    async
+                    src="https://scripts.simpleanalyticscdn.com/latest.js"
+                ></script>
             </body>
         </html>
     );
